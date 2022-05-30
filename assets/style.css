@@ -1,0 +1,864 @@
+/*  Content
+1. Main
+2. Header
+3. Nav
+4. Intro
+5. Button
+6. Features
+7. Works
+8. Team
+9. Social
+10. Reviews
+11. Download
+12. Footer
+13. Copyright
+14. Burger
+15. Media max-width: 1300px
+16. Media max-width: 991px
+17. Media max-width: 767px
+18. Media max-width: 414px
+*/
+
+
+/* 1. Main */
+body {
+    margin: 0;
+
+    font-family:'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6C7279;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: #fff;
+}
+
+*, *:before,*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+/* 2. Header */
+.header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header.fixed {
+    position: fixed;
+
+    height: auto;
+
+    background: #123123 url("img/Header/bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.header.fixed .header__inner {
+    padding: 15px 0;
+
+    border-bottom: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+    border-bottom: 1px solid #515369;
+}
+
+
+
+/* 3. Nav */
+.nav {
+    display: flex;
+}
+
+.nav__link {
+    margin-left: 60px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .75;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+
+
+/* 4. Intro */
+.intro {
+    height: 750px;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #123123 url("img/Header/bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.intro__title {
+    margin-bottom: 22px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin-bottom: 77px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+
+
+/* 5. Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 47px;
+
+    border: 0;
+    border-radius: 1px;
+    cursor: pointer;
+
+    font-family:'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background .1s linear;
+}
+
+.btn--red {
+    background-color: #E84545;
+}
+
+.btn--red:hover {
+    background-color: #DD3434
+}
+
+.btn--long {
+    padding: 16px 82px;
+}
+
+
+
+/* 6. Features */
+.features {
+    margin: 120px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features__item {
+    width: 33%;
+    margin-bottom: 60px;
+    padding: 0 40px;
+
+    text-align: center;
+}
+
+.feature__icon {
+    margin-bottom: 30px;
+}
+
+.feature__title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #2D3033;
+    text-transform: uppercase;
+}
+
+.feature__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6C7279;
+}
+
+
+
+/* 7. Works */
+.works {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__item {
+    height: 350px;
+    width: 25%;
+
+    overflow: hidden;
+
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #FFF;
+
+    position: relative;
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    background-color: rgba(232,69,69,.9);
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    transition: opacity .2s linear;
+}
+
+.works__photo {
+    min-width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%,-50%, 0);
+}
+
+.works__title {
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.works__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.works__item:hover .works__content{
+    opacity: 1;
+}
+
+
+
+/* 8. Team */
+.team {
+    margin: 100px -15px;
+}
+
+.team__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.team__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 26px;
+}
+
+.team__name {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+    font-weight: 400;
+    color: #2D3033;
+}
+
+.team__prof {
+    margin-bottom: 24px;
+
+    font-size: 13px;
+    font-weight: 400;
+    color: #E84545;
+    text-transform: uppercase;
+}
+
+.team__text {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6C7279;
+}
+
+
+
+/* 9. Social */
+.social {
+    display: flex;
+}
+
+.social__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+    background: #FFF;
+    border: 1px solid #E8ECEE;
+    cursor: pointer;
+
+    transition: background .1s linear;
+}
+
+.social__icon:last-child {
+    margin-right: 0;
+}
+
+.social__svg {
+    display: block;
+    height: 18px;
+
+    fill: #C6CACC;
+
+    transition: fill .1s linear;
+}
+
+.social__icon:hover {
+    background: #E8ECEE;
+}
+
+.social__icon:hover .social__svg {
+    fill: #000;
+}
+
+.social--footer {
+    justify-content: center;
+
+    transition: fill .1s linear;
+}
+
+.social--footer .social__icon {
+    background: none;
+    border: 2px solid #FFF;
+    border-radius: 2px;
+
+    transition: background .1s linear;
+}
+
+.social--footer .social__svg {
+    fill: #FFF;
+}
+
+.social--footer .social__icon:hover {
+    background: #FFF;
+}
+
+
+
+/* 10. Reviews */
+.reviews {
+    overflow: hidden;
+    background-color: #53354A;
+}
+
+.reviews__slider {
+    height: 500px;
+
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
+.reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+
+    position: relative;
+}
+
+.reviews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+.reviews__text {
+    margin-bottom: 30px;
+
+    font-family: 'Cardo', serif;
+    font-size: 36px;
+    line-height: 1.16;
+    font-style: italic;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.reviews__author {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    font-size: 0;
+    color: transparent;
+
+    background-color: #FFF;
+    border-radius: 50%;
+    border: 0;
+    opacity: .65;
+    cursor: pointer;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
+
+
+/* 11. Download */
+.download {
+    margin: 100px 0;
+
+    text-align: center;
+}
+
+.download__title {
+    margin-bottom: 12px;
+
+    font-size: 28px;
+    font-weight: 300;
+    color: #2D3033;
+}
+
+.download__text {
+    margin-bottom: 38px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #2D3033;
+}
+
+
+
+/* 12. Footer */
+.footer {
+    padding: 70px 0;
+
+    background-color: #3A3E64;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+
+.footer__block {
+    width: 33%;
+    padding: 0 15px;
+}
+
+.footer__title {
+    margin-bottom: 17px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.footer__address {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFF;
+    opacity: .5;
+}
+
+
+
+/* 13. Copyright */
+.copyright {
+    padding: 26px 0;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #808080;
+
+    text-align: center;
+    background-color: #313454;
+}
+
+.copyright__author {
+    color: #FFF;
+}
+
+
+
+/* 14. Burger */
+.burger {
+    display: none;
+    padding: 10px 3px;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    font-size: 0;
+    color: transparent;
+
+    background-color: #FFF;
+
+    position: relative;
+}
+
+.burger__item:before {
+    content:"";
+    width: 100%;
+    height: 100%;
+
+    background-color: #FFF;
+
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: 1;
+}
+
+.burger__item:after {
+    content:"";
+    width: 100%;
+    height: 100%;
+
+    background-color: #FFF;
+
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 1;
+}
+
+
+/* 15. Media max-width: 1300px */
+@media (max-width: 1300px) {
+
+    /* Works */
+    .works__item {
+        width: 33.33%;
+    }
+}
+
+
+
+/* 16. Media max-width: 991px */
+@media (max-width: 991px) {
+
+    /* Intro */
+    .intro__title {
+        font-size: 40px;
+    }
+
+    /* Nav */
+    .nav {
+        display: none;
+
+        width: 100%;
+        flex-direction: column;
+
+        text-align: right;
+        background-color: #31344E;
+
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 15px 9px;
+    }
+
+    /* Burger */
+    .burger {
+        display: block;
+    }
+
+    /* Features */
+    .features__item {
+        width: 50%;
+    }
+
+    /* Works */
+    .works__item {
+        width: 50%;
+    }
+
+    /* Team */
+    .team__item {
+        width: 50%;
+        margin-bottom: 50px;
+
+        text-align: center;
+    }
+
+    .team__photo {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Social */
+    .social {
+        justify-content: center;
+    }
+
+    /* Reviews */
+    .reviews__photo {
+        width: 100%;
+    }
+
+    .reviews__content {
+        width: 100%;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        padding-left: 0;
+
+        text-align: center;
+    }
+
+    .reviews__img {
+        right: -15px;
+        min-width: 991px;
+    }
+}
+
+
+
+
+/* 17. Media max-width: 767px */
+@media (max-width: 767px) {
+
+    /* Intro */
+    .intro {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        margin-bottom: 30px;
+
+        font-size: 16px;
+    }
+
+    /* Features */
+    .features {
+        margin: 40px 0;
+    }
+
+    .features__item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Works */
+    .works__item {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Team */
+    .team {
+        margin: 60px 0 30px;
+    }
+
+    .team__item {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Reviews */
+    .reviews__text {
+        font-size: 25px;
+    }
+
+    /* Button */
+    .btn--long {
+        min-width: 260px;
+    }
+
+    /* Download */
+    .download {
+        margin: 50px 0;
+    }
+
+    .download__title {
+        font-size: 24px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer__block {
+        width: 100%;
+        margin-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+/* 18. Media max-width: 414px */
+@media (max-width: 414px) {
+
+    /* Reviews */
+    .reviews__img {
+        right: -200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
