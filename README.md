@@ -1,5 +1,5 @@
 # Active_box
-Adaptive landing page with slider
+Adaptive landing with slider
 
 
 HTML 5 /
