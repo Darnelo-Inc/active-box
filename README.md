@@ -1,6 +1,11 @@
 # Active_box
-Adaptive layout of a single-page website (+JQuery)
-Сайт с адаптивной версткой Active Box
+Adaptive landing page with slider
 
 
-index.html + style.css + app.js + folder "img"
+HTML 5
+CSS 3
+jQuery
+
+For review: 
+    1. Download zip
+    2. Open index.html
