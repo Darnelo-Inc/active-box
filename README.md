@@ -1,4 +1,4 @@
-# Active_box
+# Active box
 Adaptive landing with slider
 
 
