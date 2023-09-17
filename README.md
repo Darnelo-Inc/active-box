@@ -1,4 +1,4 @@
-# Active box
+# active-box
 
 [Adaptive landing with slider](https://darnelo-inc.github.io/active-box/)
 
